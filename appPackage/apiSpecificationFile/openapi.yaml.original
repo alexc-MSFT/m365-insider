@@ -1,0 +1,115 @@
+openapi: 3.0.3
+info:
+  title: Microsoft 365 Release Communications API
+  description: Provides information about Microsoft 365 product updates and roadmap items.
+  version: 1.0.0
+servers:
+  - url: https://www.microsoft.com/releasecommunications/api/v1
+paths:
+  /m365:
+    get:
+      summary: Get Microsoft 365 roadmap items
+      description: Retrieves a list of Microsoft 365 roadmap items, including status, release dates, and tags.
+      responses:
+        '200':
+          description: List of roadmap items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RoadmapItem'
+components:
+  schemas:
+    RoadmapItem:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 510100
+        title:
+          type: string
+          example: "Microsoft 365 app: Add Search results as references to your Copilot Notebooks in the M365 Copilot app"
+        description:
+          type: string
+          example: "Users can quickly add a Search result as a reference to a Copilot Notebook within the M365 Copilot app."
+        moreInfoLink:
+          type: string
+          nullable: true
+          example: null
+        publicDisclosureAvailabilityDate:
+          type: string
+          example: "November CY2025"
+        publicPreviewDate:
+          type: string
+          nullable: true
+          example: ""
+        created:
+          type: string
+          format: date-time
+          example: "2025-10-03T22:00:02"
+        publicRoadmapStatus:
+          type: string
+          example: "Include this month"
+        status:
+          type: string
+          example: "In development"
+        modified:
+          type: string
+          format: date-time
+          example: "2025-10-03T22:00:02"
+        locale:
+          type: string
+          nullable: true
+          example: null
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+        tagsContainer:
+          $ref: '#/components/schemas/TagsContainer'
+      required:
+        - id
+        - title
+        - description
+        - publicDisclosureAvailabilityDate
+        - created
+        - publicRoadmapStatus
+        - status
+        - modified
+        - tags
+        - tagsContainer
+
+    Tag:
+      type: object
+      properties:
+        tagName:
+          type: string
+          example: "Worldwide (Standard Multi-Tenant)"
+      required:
+        - tagName
+
+    TagsContainer:
+      type: object
+      properties:
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+        cloudInstances:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+        releasePhase:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+        platforms:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+      required:
+        - products
+        - cloudInstances
+        - releasePhase
+        - platforms

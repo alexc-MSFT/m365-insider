@@ -1,0 +1,38 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.24/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.24",
+    "version": "1.0.0",
+    "id": "${{TEAMS_APP_ID}}",
+    "developer": {
+        "name": "Microsoft",
+        "websiteUrl": "https://www.microsoft.com",
+        "privacyUrl": "https://www.microsoft.com",
+        "termsOfUseUrl": "https://www.microsoft.com"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "M365 Insider Agent",
+        "full": "M365 Insider Agent"
+    },
+    "description": {
+        "short": "Track upcoming Microsoft 365 features and release timelines easily.",
+        "full": "M365 Insider helps you keep track of what's next in Microsoft 365. It answers questions about product functionality, upcoming features, and rollout schedules by leveraging the official Microsoft 365 Roadmap API. With filtering options for product names, release phases, preview availability, tags, and keywords, this agent ensures you get accurate, up-to-date information in a clear, business-friendly format."
+    },
+    "accentColor": "#FFFFFF",
+    "copilotAgents": {
+        "declarativeAgents": [            
+            {
+                "id": "declarativeAgent",
+                "file": "declarativeAgent.json"
+            }
+        ]
+    },
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}

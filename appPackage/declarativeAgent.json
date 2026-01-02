@@ -1,0 +1,56 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.6/schema.json",
+    "version": "v1.6",
+    "name": "M365 Insider",
+    "description": "Track upcoming Microsoft 365 features and release timelines easily.",
+    "instructions": "$[file('instruction.txt')]",
+    "actions": [
+        {
+            "id": "GetRoadmapItems",
+            "file": "ai-plugin.json"
+        }
+    ],
+    "behavior_overrides": {
+    "suggestions": {
+      "disabled": true
+    },
+    "special_instructions": {
+      "discourage_model_knowledge": true
+    }
+  },
+   "disclaimer": {
+    "text": "The information provided by this agent is sourced from the Microsoft 365 Roadmap API and is intended for general informational purposes only. While we strive to ensure accuracy, roadmap details such as release dates, availability, and feature descriptions are subject to change without notice. This agent does not guarantee timelines or commitments. For the most up-to-date and official information, please refer to the https://www.microsoft.com/microsoft-365/roadmap."
+  },
+  "capabilities": [
+    {
+        "name": "CodeInterpreter"
+    }
+  ],
+    
+"conversation_starters": [
+    {
+      "title": "🚀 Releasing Soon",
+      "text": "Show features targeted for release in December."
+    },
+    {
+      "title": "📋 General Roadmap Inquiry",
+      "text": "What updates are coming for Copilot next month?"
+    },
+    {
+      "title": "🔍 Preview Features",
+      "text": "Which features are in preview for OneDrive?"
+    },
+    {
+      "title": "🆔 Feature Details",
+      "text": "Give me details for feature 529864"
+    },
+    {
+      "title": "🔑 Keyword Search",
+      "text": "Search for roadmap items mentioning Teams"
+    },
+    {
+      "title": "🏷️ Tag-Based Search",
+      "text": "Find roadmap items with the tag Targeted Release"
+    }
+  ]
+}

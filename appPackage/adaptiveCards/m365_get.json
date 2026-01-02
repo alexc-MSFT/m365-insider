@@ -1,0 +1,167 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "${title}",
+                    "weight": "Bolder",
+                    "size": "Medium"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Roadmap ID",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Status",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Preview Available",
+                                    "wrap": true,
+                                    "isVisible": "${publicPreviewDate != ''}"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Rollout Start",
+                                    "wrap": true,
+                                    "isVisible": "${publicDisclosureAvailabilityDate != ''}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${string(id)}",
+                                    "wrap": true,
+                                    "weight": "Bolder"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${status}",
+                                    "wrap": true,
+                                    "weight": "Bolder"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${publicPreviewDate}",
+                                    "wrap": true,
+                                    "weight": "Bolder",
+                                    "isVisible": "${publicPreviewDate != ''}"
+
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${publicDisclosureAvailabilityDate}",
+                                    "wrap": true,
+                                    "weight": "Bolder",
+                                    "iVisible": "${publicDisclosureAvailabilityDate != null && publicDisclosureAvailabilityDate != ''}"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "${description}",
+                    "wrap": true
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Added to Roadmap:",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${formatDateTime(created, 'MM-dd-yyyy')}",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "| Last Modified:",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${formatDateTime(modified, 'MM-dd-yyyy')}",
+                            "wrap": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "[More Info](https://www.microsoft.com/en-us/microsoft-365/roadmap?searchterms=${id})",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Tags:",
+            "wrap": true,
+            "weight": "Bolder"
+        },
+        {
+            "type": "Container",
+            "$data": "${tags}",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "${tagName}",
+                    "wrap": true,
+                    "spacing": "None",
+                    "size": "Small"
+                }
+            ]
+        }
+    ]
+}
