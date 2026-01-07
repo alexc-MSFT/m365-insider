@@ -1,10 +1,10 @@
 {
     "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.3/schema.json",
     "schema_version": "v2.3",
-    "name_for_human": "Microsoft 365 Release Communications API",
+    "name_for_human": "Microsoft 365 Roadmap",
     "description_for_human": "Provides information about Microsoft 365 product updates and roadmap items.",
     "description_for_model": "Provides information about Microsoft 365 product updates and roadmap items.",
-    "contact_email": "publisher-email@example.com",
+    "contact_email": "alex.clark@microsoft.com",
     "namespace": "m365insideragent",
     "capabilities": {},
     "functions": [

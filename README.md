@@ -1,13 +1,16 @@
 
 # M365 Insider — Microsoft 365 Roadmap Copilot Agent 🔎
 
-**M365 Insider** is a declarative agent built in the Agents Toolkit for Microsoft 365 Copilot that helps users/administrators query and explore the **Microsoft 365 Roadmap** - surface upcoming features, filter by product/area, and answer roadmap questions quickly and consistently.
+![M365 Insider Agent Screenshot](m365-insider-screenshot.png)
+
+**M365 Insider** is a declarative agent built in the Agents Toolkit for Microsoft 365 Copilot that helps users/administrators query and explore the **Microsoft 365 Roadmap** - surface upcoming features, filter by product/area, and answer roadmap questions quickly and consistently. It leverages adaptive cards to provide consistent formatting in responses.
 
 It uses an API plugin to leverage the Microsoft 365 Roadmap public REST API (https://www.microsoft.com/releasecommunications/api/v1/m365).
 
 It’s designed to be lightweight, web‑grounded, and easy to deploy with the **Microsoft 365 Agents Toolkit** in Visual Studio Code.  
 
 This repository contains basic deployment details for running and publishing the agent in your own Microsoft 365 environment (it assumes a proficient level of knowledge with the Agents Toolkit).
+
 
 ---
 
@@ -22,6 +25,8 @@ Suggested prompts to try:
 - *“What’s coming for Microsoft Teams in the next quarter?”*  
 - *“Show roadmap items related to SharePoint admin experiences announced last month.”*  
 - *“List features currently in ‘Rolling out’ status for Outlook.”*
+
+![M365 Insider Agent Response Screenshot](m365-insider-response-screenshot.png)
 
 ##  Future iterations
 
