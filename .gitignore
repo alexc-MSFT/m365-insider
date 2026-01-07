@@ -11,7 +11,6 @@ node_modules/
 .env
 .deployment
 .DS_Store
-env/.env.dev
 .vscode/tasks.json
 .vscode/settings.json
 .vscode/launch.json
