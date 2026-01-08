@@ -1,7 +1,7 @@
 {
     "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.3/schema.json",
     "schema_version": "v2.3",
-    "name_for_human": "Microsoft 365 Roadmap",
+    "name_for_human": "M365 Roadmap",
     "description_for_human": "Provides information about Microsoft 365 product updates and roadmap items.",
     "description_for_model": "Provides information about Microsoft 365 product updates and roadmap items.",
     "contact_email": "alex.clark@microsoft.com",
@@ -15,7 +15,7 @@
                 "response_semantics": {
                     "data_path": "$",
                     "static_template": {
-                        "file": "./adaptiveCards/m365_get.json"
+                        "file": "adaptiveCards/m365_get.json"
                     }
                 }
             }
