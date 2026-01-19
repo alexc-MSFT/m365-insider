@@ -46,7 +46,7 @@ You can deploy directly from VS Code using the **Microsoft 365 Agents Toolkit** 
 
 1. Ensure you have the Agents Toolkit extension for Visual Studio Code installed ([Install Agents Toolkit](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/install-agents-toolkit?tabs=vscode#install-a-prerelease-version))
 2. Clone the [repo](https://github.com/alexc-MSFT/m365-insider.git) to your machine .
-3. Open the folder in Visual Studio Code and follow the steps in ([Tutorial: Create declarative agents by using Microsoft 365 Agents Toolkit](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/build-declarative-agents)) to provision the agent. **Note -  as the agent contains an API Plugin, it cannot be provisioned directly from the Agents Toolkit, you will need to package and sideload it/submit for admin approval)**. 
+3. Open the folder in Visual Studio Code and follow the steps in ([Tutorial: Create declarative agents by using Microsoft 365 Agents Toolkit](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/build-declarative-agents)) to provision the agent.
 4. Deploy the agent for all/desired users through the MAC.
 
 ---
